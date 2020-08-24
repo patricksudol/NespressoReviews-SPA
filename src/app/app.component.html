@@ -1,62 +1,16 @@
 <app-top-nav></app-top-nav>
+<br>
 <div class="container-fluid">
-<carousel [height]="400" [cellWidth]="400">
-    <div class="card carousel-cell" style="width: 18rem; height: adaptiveHeight;">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <div class="card carousel-cell" style="width: 18rem; height: adaptiveHeight;">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <div class="card carousel-cell" style="width: 18rem; height: adaptiveHeight;">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <div class="card carousel-cell" style="width: 18rem; height: adaptiveHeight;">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <div class="card carousel-cell" style="width: 18rem; height: adaptiveHeight;">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <div class="card carousel-cell" style="width: 18rem; height: adaptiveHeight;">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <div class="card carousel-cell" style="width: 18rem; height: adaptiveHeight;">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-</carousel>
+    <carousel [height]="400" [cellWidth]="400">
+        <app-pod-tile class="carousel-cell"></app-pod-tile>
+        <app-pod-tile class="carousel-cell"></app-pod-tile>
+        <app-pod-tile class="carousel-cell"></app-pod-tile>
+        <app-pod-tile class="carousel-cell"></app-pod-tile>
+        <app-pod-tile class="carousel-cell"></app-pod-tile>
+        <app-pod-tile class="carousel-cell"></app-pod-tile>
+        <app-pod-tile class="carousel-cell"></app-pod-tile>
+        <app-pod-tile class="carousel-cell"></app-pod-tile>
+        
+    </carousel>
 </div>
 <router-outlet></router-outlet>
