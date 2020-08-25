@@ -8,6 +8,7 @@ import { TopNavComponent } from './top-nav/top-nav.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { PodTileComponent } from './pod-tile/pod-tile.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { RatingStarsComponent } from './rating-stars/rating-stars.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     AppComponent,
     TopNavComponent,
     PodTileComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    RatingStarsComponent
   ],
   imports: [
     BrowserModule,
