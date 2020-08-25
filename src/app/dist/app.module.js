@@ -13,6 +13,8 @@ var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 var top_nav_component_1 = require("./top-nav/top-nav.component");
 var angular_responsive_carousel_1 = require("angular-responsive-carousel");
+var pod_tile_component_1 = require("./pod-tile/pod-tile.component");
+var landing_page_component_1 = require("./landing-page/landing-page.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -20,7 +22,9 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             declarations: [
                 app_component_1.AppComponent,
-                top_nav_component_1.TopNavComponent
+                top_nav_component_1.TopNavComponent,
+                pod_tile_component_1.PodTileComponent,
+                landing_page_component_1.LandingPageComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,

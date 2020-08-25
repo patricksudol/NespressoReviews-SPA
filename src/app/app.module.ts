@@ -9,6 +9,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { PodTileComponent } from './pod-tile/pod-tile.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

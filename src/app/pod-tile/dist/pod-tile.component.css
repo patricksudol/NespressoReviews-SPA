@@ -2,6 +2,15 @@
   position: relative;
 }
 
+.title {
+  position: absolute;
+}
+
+.rating {
+  position: absolute;
+  right: 10%;
+}
+
 .overlay {
   position: absolute;
   top: 0;
