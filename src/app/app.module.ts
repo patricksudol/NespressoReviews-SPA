@@ -9,6 +9,8 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { PodTileComponent } from './pod-tile/pod-tile.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { RatingModule } from 'ng-starrating';
+import { PodPageComponent } from './pod-page/pod-page.component';
+import { NgxGalleryModule } from 'ngx-gallery-9';
 
 
 @NgModule({
@@ -17,12 +19,14 @@ import { RatingModule } from 'ng-starrating';
     TopNavComponent,
     PodTileComponent,
     LandingPageComponent,
+    PodPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     IvyCarouselModule,
-    RatingModule
+    RatingModule,
+    NgxGalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
