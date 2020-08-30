@@ -22,6 +22,7 @@
     "angular-responsive-carousel": "^1.2.9",
     "bootstrap": "^4.5.2",
     "bootswatch": "^4.5.2",
+    "ng-starrating": "^1.0.20",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
