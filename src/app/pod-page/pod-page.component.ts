@@ -19,7 +19,7 @@ export class PodPageComponent implements OnInit {
 
     this.galleryOptions = [
       { "image": false, "thumbnailsRemainingCount": true, "height": "100px" },
-      { "breakpoint": 500, "width": "100%", "thumbnailsColumns": 2 }
+      { "breakpoint": 500, "width": "100%", "thumbnailsColumns": 2, "thumbnailsArrows": true },
     ];
 
     this.galleryImages = [
