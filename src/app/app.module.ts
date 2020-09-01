@@ -11,6 +11,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { RatingModule } from 'ng-starrating';
 import { PodPageComponent } from './pod-page/pod-page.component';
 import { NgxGalleryModule } from 'ngx-gallery-9';
+import { ReviewComponent } from './review/review.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { NgxGalleryModule } from 'ngx-gallery-9';
     TopNavComponent,
     PodTileComponent,
     LandingPageComponent,
-    PodPageComponent
+    PodPageComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
