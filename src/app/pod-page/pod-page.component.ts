@@ -10,14 +10,13 @@ export class PodPageComponent implements OnInit {
 
   constructor() { }
 
-  // ngOnInit(): void {
-  // }
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
 
   ngOnInit(): void {
 
     this.galleryOptions = [
+      { imageDescription: true },
       { "image": false, "thumbnailsRemainingCount": true, "height": "100px" },
       { "breakpoint": 500, "width": "100%", "thumbnailsColumns": 2, "thumbnailsArrows": true },
     ];

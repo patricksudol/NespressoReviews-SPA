@@ -8,13 +8,19 @@ import { Photo } from '../models/photo.model';
 })
 export class ReviewComponent implements OnInit {
 
-  public header: string;
-  public body: string;
+  public reviewHeader: string;
+  public reviewBody: string;
   public photos: Photo[];
+  public toCollapse: boolean;
 
 
 
   ngOnInit(): void {
+    // this.toCollapse = this.tooBig(this.reviewBody);
   }
+
+  // public tooBig(message: string): boolean {
+  //   return message.length > 50 ? true : false;
+  // }
 
 }
