@@ -5,6 +5,8 @@
             <img class="pod-image" src="assets/images/puertoricopod.png" height="100" width="200" align="left">
             <div class="pod-description">
                 <h4 class="card-title">Cafecito de Puerto Rico</h4>
+                <span class="badge badge-pill badge-primary">Good with Milk</span>
+                <span class="badge badge-pill badge-primary">Good with Milk</span>
                 <h5 class="card-subtitle mb-2 text-muted">Vertuo</h5>
                 <h6 class="card-subtitle mb-2">Double Espresso</h6>
                 <p class="card-text">Intense and creamy flavor of the espresso reveals an aromatic bouquet of dark
@@ -16,12 +18,13 @@
             <hr class="solid">
             <p class="rating-score">4.5</p>
             <star-rating value="4" [totalstars]="5" checkedcolor="brown" uncheckedcolor="black" size="18px" readonly="true"></star-rating>
+            <p class="review-count">45 Reviews</p>
         </div>
     </div>
     <br>
     <div class="card">
         <div class="card-body review-card">
-            <h2 class="card-title">Review Photos</h2>
+            <h2 class="card-title">Reviewer Images</h2>
             <div class="card-body review-card-body">
                 <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
             </div>

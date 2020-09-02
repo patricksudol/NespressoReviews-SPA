@@ -6,6 +6,16 @@
   position: absolute;
 }
 
+.tile-header {
+  position: relative;
+}
+
+star-rating {
+  position: absolute;
+  right: 0%;
+  display: inline-block;
+}
+
 .rating {
   position: absolute;
   right: 10%;

@@ -1,3 +1,15 @@
+.pod-description {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    color: white;
+    background-color: black;
+}
+
 hr.solid {
     border-top: 3px solid;
 }
@@ -14,14 +26,10 @@ hr.solid {
 
 star-rating {
     display: inline-block;
+    margin-right: 350px;
 }
 
-// .review-card-body {
-//     position: relative;
-// }
+.review-count {
+    display: inline-block;
 
-// ngx-gallery {
-//     position: absolute;
-//     top: 10%;
-//     left: 25%;
-// }
+}
