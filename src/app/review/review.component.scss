@@ -6,3 +6,24 @@
 // .review-header, h5 {
 //     display: inline-block;
 // }
+div {
+    position: relative;
+}
+
+.user {
+    position: absolute;
+    top: 0%;
+    left: 85%;
+}
+
+.user-picture {
+    display: inline;
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+    margin-right: 5%;;
+}
+
+.user-name {
+    display: inline;
+}
