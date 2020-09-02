@@ -12,6 +12,7 @@ export class PodPageComponent implements OnInit {
 
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
+  
 
   ngOnInit(): void {
 
