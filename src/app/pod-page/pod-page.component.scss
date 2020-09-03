@@ -7,7 +7,7 @@
     right: 0%;
     top: 0%;
     color: white;
-    background-color: black;
+    background-color: lightblue;
 }
 
 hr.solid {
@@ -31,9 +31,17 @@ star-rating {
 
 .review-count {
     display: inline-block;
+    margin-right: 350px;
+}
 
+.intensity {
+    display: inline-block
 }
 
 .header-body {
     padding-bottom: 0%;
+}
+
+.progress-bar {
+    color: brown;
 }

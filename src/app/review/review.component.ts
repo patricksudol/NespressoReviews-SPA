@@ -11,7 +11,7 @@ export class ReviewComponent implements OnInit {
   public reviewHeader: string;
   public reviewBody: string;
   public photos: Photo[];
-  public toCollapse: boolean;
+  public isCollapsed: boolean;
 
 
 

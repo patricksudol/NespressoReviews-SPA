@@ -6,7 +6,8 @@ import { PodPageComponent } from './pod-page/pod-page.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
-  { path: 'pod', component: PodPageComponent }
+  { path: 'pod', component: PodPageComponent },
+  { path: '**', component: LandingPageComponent }
 ];
 
 @NgModule({

@@ -1,11 +1,3 @@
-// star-rating {
-//     display: inline-block;
-//     margin-right: 10px;
-// }
-
-// .review-header, h5 {
-//     display: inline-block;
-// }
 div {
     position: relative;
 }
@@ -26,4 +18,12 @@ div {
 
 .user-name {
     display: inline;
+}
+
+.read-more-link {
+    text-decoration: underline;
+}
+
+.read-more-link:hover {
+    color: brown;
 }
