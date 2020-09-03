@@ -35,7 +35,7 @@ export class ReviewComponent {
 
   constructor() {
     const reviewArray: string[] = this.reviewBody.split(' ');
-    this.isCollapsed = reviewArray.length > 51 ? true : false;
+    this.isCollapsed = reviewArray.length > 50 ? true : false;
     this.minimizedBody = reviewArray.slice(0, 50 ).join(' ');
   }
 
