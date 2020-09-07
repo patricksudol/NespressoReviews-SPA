@@ -7,6 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PodListingComponent implements OnInit {
 
+  public pods: string[] = [
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
