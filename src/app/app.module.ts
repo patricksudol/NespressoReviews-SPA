@@ -12,6 +12,8 @@ import { RatingModule } from 'ng-starrating';
 import { PodPageComponent } from './pod-page/pod-page.component';
 import { NgxGalleryModule } from 'ngx-gallery-9';
 import { ReviewComponent } from './review/review.component';
+import { PodListingComponent } from './pod-listing/pod-listing.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -21,14 +23,16 @@ import { ReviewComponent } from './review/review.component';
     PodTileComponent,
     LandingPageComponent,
     PodPageComponent,
-    ReviewComponent
+    ReviewComponent,
+    PodListingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     IvyCarouselModule,
     RatingModule,
-    NgxGalleryModule
+    NgxGalleryModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
