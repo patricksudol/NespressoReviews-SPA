@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { StarRatingComponent } from 'ng-starrating';
 
 @Component({
@@ -6,17 +6,17 @@ import { StarRatingComponent } from 'ng-starrating';
   templateUrl: './pod-tile.component.html',
   styleUrls: ['./pod-tile.component.scss']
 })
-export class PodTileComponent implements OnInit {
+export class PodTileComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input()
+  public height: string;
+  @Input()
+  public paddingBottom: string;
 
   onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) {
-    alert(`Old Value:${$event.oldValue}, 
-      New Value: ${$event.newValue}, 
-      Checked Color: ${$event.starRating.checkedcolor}, 
+    alert(`Old Value:${$event.oldValue},
+      New Value: ${$event.newValue},
+      Checked Color: ${$event.starRating.checkedcolor},
       Unchecked Color: ${$event.starRating.uncheckedcolor}`);
   }
 
