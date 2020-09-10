@@ -1,5 +1,6 @@
 .container {
   position: relative;
+  display: inline-block;
 }
 
 .title {
@@ -23,7 +24,7 @@ star-rating {
 }
 
 .image {
-  display: block;
+  display: inline-block;
   width: 100%;
   height: auto;
 }
