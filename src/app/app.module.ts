@@ -14,6 +14,7 @@ import { NgxGalleryModule } from 'ngx-gallery-9';
 import { ReviewComponent } from './review/review.component';
 import { PodListingComponent } from './pod-listing/pod-listing.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     IvyCarouselModule,
     RatingModule,
     NgxGalleryModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

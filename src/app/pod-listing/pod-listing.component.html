@@ -1,4 +1,4 @@
 <div class="container">
-    <app-pod-tile [height]="'33%'" [paddingBottom]="'3%'" *ngFor="let pod of pods | paginate: { itemsPerPage: 12, currentPage: page }"></app-pod-tile>
+    <app-pod-tile [height]="'33%'" [paddingBottom]="'3%'" *ngFor="let pod of pods | stringFilter: filter | paginate: { itemsPerPage: 12, currentPage: page }"></app-pod-tile>
     <pagination-controls class="pagination-control" (pageChange)="page = $event"></pagination-controls>
 </div>
