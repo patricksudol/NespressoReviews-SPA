@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pod-listing',
@@ -7,43 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PodListingComponent {
 
-  public pods: string[] = [
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one',
-    'one'
-  ];
-
+  @Input()
+  public filterTerm: string;
+  public pods: string[] = Array(100).fill('test');
   public page: number = 1;
+
 }
