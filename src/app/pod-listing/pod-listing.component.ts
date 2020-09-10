@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pod-listing.component.html',
   styleUrls: ['./pod-listing.component.scss']
 })
-export class PodListingComponent implements OnInit {
+export class PodListingComponent {
 
   public pods: string[] = [
     'one',
@@ -16,11 +16,34 @@ export class PodListingComponent implements OnInit {
     'one',
     'one',
     'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one',
+    'one'
   ];
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  public page: number = 1;
 }
