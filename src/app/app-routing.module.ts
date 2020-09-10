@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { PodPageComponent } from './pod-page/pod-page.component';
-import { PodListingComponent } from './pod-listing/pod-listing.component';
+import { LandingPageComponent } from './base-components/landing-page/landing-page.component';
+import { PodPageComponent } from './pod/pod-page/pod-page.component';
+import { PodListingComponent } from './pod/pod-listing/pod-listing.component';
 
 
 const routes: Routes = [
