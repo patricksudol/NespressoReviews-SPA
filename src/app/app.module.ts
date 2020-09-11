@@ -35,6 +35,7 @@ import { StarsRatingComponent } from './base-components/stars-rating/stars-ratin
     IvyCarouselModule,
     RatingModule,
     NgxGalleryModule,
+    // TODO: Add wrapper component for pagination controls
     NgxPaginationModule,
     FormsModule
   ],

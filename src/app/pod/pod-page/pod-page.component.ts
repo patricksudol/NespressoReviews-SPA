@@ -10,9 +10,11 @@ export class PodPageComponent implements OnInit {
 
   constructor() { }
 
-  galleryOptions: NgxGalleryOptions[];
-  galleryImages: NgxGalleryImage[];
-  
+  public galleryOptions: NgxGalleryOptions[];
+  public galleryImages: NgxGalleryImage[];
+  public reviews: string[] = Array(100).fill('test');
+  public page: number = 1;
+
 
   ngOnInit(): void {
 
