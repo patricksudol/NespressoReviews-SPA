@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-stars-rating',
@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StarsRatingComponent {
 
+  @Input() public rating: number;
   public readOnly: boolean;
-  private rating: number;
+
 
   public getRoundedValue(): number {
     return Math.round(this.rating);
