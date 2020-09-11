@@ -15,6 +15,7 @@ import { ReviewComponent } from './review/review.component';
 import { PodListingComponent } from './pod/pod-listing/pod-listing.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
+import { StarsRatingComponent } from './base-components/stars-rating/stars-rating.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     LandingPageComponent,
     PodPageComponent,
     ReviewComponent,
-    PodListingComponent
+    PodListingComponent,
+    StarsRatingComponent
   ],
   imports: [
     BrowserModule,
