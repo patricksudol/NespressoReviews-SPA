@@ -1,6 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 import { SearchService } from 'src/app/services/search/search.service';
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-top-nav',
@@ -15,6 +15,7 @@ export class TopNavComponent implements OnInit{
   ngOnInit() {
     this.searchService.currentSearchTerm.subscribe(search => this.searchTerm = search);
   }
+
 
   public updateSearchTerm() {
     this.searchService.updateSearchTerm(this.searchTerm);
