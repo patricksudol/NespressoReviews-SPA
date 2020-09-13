@@ -16,6 +16,7 @@ import { PodListingComponent } from './pod/pod-listing/pod-listing.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
 import { StarsRatingComponent } from './base-components/stars-rating/stars-rating.component';
+import { StringFilterPipe } from './pipes/string-filter.pipe';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { StarsRatingComponent } from './base-components/stars-rating/stars-ratin
     PodPageComponent,
     ReviewComponent,
     PodListingComponent,
-    StarsRatingComponent
+    StarsRatingComponent,
+    StringFilterPipe
   ],
   imports: [
     BrowserModule,

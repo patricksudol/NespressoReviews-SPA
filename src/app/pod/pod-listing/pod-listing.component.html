@@ -1,4 +1,10 @@
 <div class="container">
-    <app-pod-tile [height]="'33%'" [paddingBottom]="'3%'" *ngFor="let pod of pods | paginate: { itemsPerPage: 12, currentPage: page }"></app-pod-tile>
+    <h1>You are filtering for: {{ filterTerm }}</h1>
+    <app-pod-tile
+        *ngFor="let pod of pods | stringFilter: filterTerm | paginate: { itemsPerPage: 12, currentPage: page }"
+        [height]="'33%'"
+        [paddingBottom]="'3%'"
+    >
+    </app-pod-tile>
     <pagination-controls class="pagination-control" (pageChange)="page = $event"></pagination-controls>
 </div>
