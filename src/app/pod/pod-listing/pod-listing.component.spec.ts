@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { StringFilterPipe } from 'src/app/pipes/string-filter.pipe';
 
 import { PodListingComponent } from './pod-listing.component';
 
@@ -8,7 +10,8 @@ describe('PodListingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PodListingComponent ]
+      imports: [ NgxPaginationModule ],
+      declarations: [ PodListingComponent, StringFilterPipe ]
     })
     .compileComponents();
   }));

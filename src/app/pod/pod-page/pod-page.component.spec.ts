@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PodPageComponent } from './pod-page.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 describe('PodPageComponent', () => {
   let component: PodPageComponent;
@@ -8,6 +9,7 @@ describe('PodPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ NgxPaginationModule ],
       declarations: [ PodPageComponent ]
     })
     .compileComponents();
