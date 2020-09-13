@@ -1,0 +1,10 @@
+<ng-template *ngIf="isReviewed; then editReview else newReview"></ng-template>
+<ng-template #newReview>
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Add a Review</h2>
+            <app-stars-rating [rating]="0" [readOnly]="false"></app-stars-rating>
+        </div>
+    </div>
+</ng-template>
+<ng-template #editReview>Edit</ng-template>

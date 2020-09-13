@@ -10,7 +10,7 @@ export class PodListingComponent implements OnInit {
 
   @Input()
   public filterTerm: string;
-  public pods: string[] = Array(100).fill('test');
+  public pods: string[] = Array(100).fill('test').concat(Array(100).fill('cookie')).concat(Array(4).fill('pie'));
   public filter: string;
   public page: number = 1;
 

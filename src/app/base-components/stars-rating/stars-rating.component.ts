@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class StarsRatingComponent {
 
   @Input() public rating: number;
-  public readOnly: boolean;
+  @Input() public readOnly: boolean;
 
 
   public getRoundedValue(): number {
