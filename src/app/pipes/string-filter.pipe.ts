@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+// TODO: Trim white space
 @Pipe({
   name: 'stringFilter'
 })
