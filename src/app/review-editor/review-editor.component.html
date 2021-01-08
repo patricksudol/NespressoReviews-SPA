@@ -2,8 +2,11 @@
 <ng-template #newReview>
     <div class="card">
         <div class="card-body">
-            <h2 class="card-title">Add a Review</h2>
+            <h2 class="card-title">Your Review</h2>
             <app-stars-rating [rating]="0" [readOnly]="false"></app-stars-rating>
+            <div class="form-group">
+                <input class="form-control form-control-lg" type="text" placeholder="Write Your Review!" id="inputLarge">
+            </div>
         </div>
     </div>
 </ng-template>
