@@ -12,6 +12,8 @@ export class PodTileComponent {
   public height: string;
   @Input()
   public paddingBottom: string;
+  @Input()
+  public name: string;
 
   onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) {
     alert(`Old Value:${$event.oldValue},

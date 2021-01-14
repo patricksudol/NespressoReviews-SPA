@@ -1,14 +1,16 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { Pod } from '../models/pod';
 
 // TODO: Trim white space
 @Pipe({
-  name: 'stringFilter'
+  name: 'podFilter'
 })
 export class StringFilterPipe implements PipeTransform {
-  transform(value: string[], q: string) {
+  transform(pods: Pod[], q: string) {
     if (!q || q === '') {
-      return value;
+      return pods;
     }
-    return value.filter(item => -1 < item.toLowerCase().indexOf(q.toLowerCase()));
+    console.log(pods);
+    return pods.filter(pod => -1 < pod.name.toLowerCase().indexOf(q.toLowerCase()));
   }
 }
