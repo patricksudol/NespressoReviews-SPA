@@ -10,7 +10,6 @@ export class StringFilterPipe implements PipeTransform {
     if (!q || q === '') {
       return pods;
     }
-    console.log(pods);
     return pods.filter(pod => -1 < pod.name.toLowerCase().indexOf(q.toLowerCase()));
   }
 }

@@ -12,9 +12,8 @@ export class PodListingComponent implements OnInit {
 
   @Input()
   public filterTerm: string;
-  public pods: Pod[];
-  // public pods: string[] = Array(100).fill('test').concat(Array(100).fill('cookie')).concat(Array(4).fill('pie'));
   public filter: string;
+  public pods: Pod[];
   public page: number = 1;
 
   constructor(
@@ -27,7 +26,7 @@ export class PodListingComponent implements OnInit {
     this.showPods()
   }
 
-  public showPods() : void {
+  private showPods() : void {
     this.podService.getPods()
       .subscribe((pods: Pod[]) => {
         this.pods = pods
