@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { StarsRatingComponent } from './base-components/stars-rating/stars-rating.component';
 import { StringFilterPipe } from './pipes/string-filter.pipe';
 import { ReviewEditorComponent } from './review-editor/review-editor.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { ReviewEditorComponent } from './review-editor/review-editor.component';
     NgxGalleryModule,
     // TODO: Add wrapper component for pagination controls
     NgxPaginationModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
