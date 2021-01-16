@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import { Pod } from 'src/app/models/pod';
+import { Pod } from 'src/app/models/pod.model';
 import { PodService } from 'src/app/services/pod.service';
 import { SearchService } from 'src/app/services/search/search.service';
 

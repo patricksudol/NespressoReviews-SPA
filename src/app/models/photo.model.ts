@@ -1,4 +1,4 @@
-export class Photo {
-    public id: string;
-    public url: string;
+export interface Photo {
+    id: string;
+    url: string;
 }

@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Pod } from '../models/pod';
+import { Pod } from '../models/pod.model';
 
 // TODO: Trim white space
 @Pipe({
