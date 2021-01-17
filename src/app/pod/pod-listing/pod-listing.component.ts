@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Pod } from 'src/app/models/pod.model';
-import { PodService } from 'src/app/services/pod.service';
+import { PodService } from 'src/app/services/pod/pod.service';
 import { SearchService } from 'src/app/services/search/search.service';
 
 @Component({
@@ -24,9 +24,10 @@ export class PodListingComponent implements OnInit {
   ngOnInit() {
     this.searchService.currentSearchTerm.subscribe(search => this.filterTerm = search);
     this.showPods()
+    console.log(this.pods);
   }
 
-  private showPods() : void {
+  private showPods(): void {
     this.podService.getPods()
       .subscribe((pods: Pod[]) => {
         this.pods = pods
