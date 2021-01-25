@@ -39,7 +39,7 @@ export class ReviewComponent {
     this.minimizedBody = reviewArray.slice(0, 50 ).join(' ');
   }
 
-  toggleCollapse() {
+  public toggleCollapse() {
     this.isCollapsed = this.isCollapsed ? false : true;
   }
 

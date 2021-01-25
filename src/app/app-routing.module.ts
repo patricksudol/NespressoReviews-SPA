@@ -16,7 +16,10 @@ const routes: Routes = [
       podtypes: PodTypesResolve
     }
   },
-  { path: 'vertuo', component: PodListingComponent },
+  {
+    path: 'vertuo',
+    component: PodListingComponent,
+  },
   { path: 'pod', component: PodPageComponent },
   { path: '**', component: LandingPageComponent }
 ];

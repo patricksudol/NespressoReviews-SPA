@@ -17,6 +17,8 @@ export class LandingPageComponent implements OnInit {
   public originalPods: Pod[];
   public vertuoPods: Pod[];
 
+  private pods: Pod[];
+
   constructor(
     private podTypeService: PodTypeService,
     private podService: PodService,
@@ -24,9 +26,14 @@ export class LandingPageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.trendingPods = this.route.snapshot.data.pods;
     this.podTypes = this.route.snapshot.data.podtypes;
-    console.log(this.trendingPods);
+    this.pods = this.route.snapshot.data.pods;
+    this.originalPods = this.pods.filter(pod => pod.podTypeId == this.getPodTypeId('Original'));
+    this.vertuoPods = this.pods.filter(pod => pod.podTypeId == this.getPodTypeId('Vertuo'));
+  }
+
+  private getPodTypeId(name: string): string {
+    return this.podTypes.find(podtype => podtype.name == name).id;
   }
 
 }
