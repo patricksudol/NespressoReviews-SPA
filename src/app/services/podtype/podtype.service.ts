@@ -9,7 +9,7 @@ import { Podtype } from 'src/app/models/podtype.model';
 export class PodTypeService {
   constructor(private http: HttpClient) {}
 
-  public getPodTypes() {
+  public getPodTypes(): any {
     return this.http.get('http://localhost:8080/api/podtypes');
   }
 }

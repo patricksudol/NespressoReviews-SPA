@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Pod } from 'src/app/models/pod.model';
 import { Podtype } from 'src/app/models/podtype.model';
 import { PodService } from 'src/app/services/pod/pod.service';
@@ -18,31 +19,14 @@ export class LandingPageComponent implements OnInit {
 
   constructor(
     private podTypeService: PodTypeService,
-    private podService: PodService
+    private podService: PodService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
-    this.getPodTypes();
-    this.getPods();
+    this.trendingPods = this.route.snapshot.data.pods;
+    this.podTypes = this.route.snapshot.data.podtypes;
+    console.log(this.trendingPods);
   }
 
-  private getPodTypes(): void {
-    this.podTypeService.getPodTypes()
-      .subscribe((data: Podtype[]) => {
-        this.podTypes = data;
-      });
-  }
-
-  private getPodTypeId(name: string): string {
-    return this.podTypes.filter(podType => podType.name === name)[0].id;
-  }
-
-  private getPods(): void {
-    this.podService.getPods()
-      .subscribe((data: Pod[]) => {
-        this.trendingPods = data
-        this.vertuoPods = data
-        this.originalPods = data
-      });
-  }
 }

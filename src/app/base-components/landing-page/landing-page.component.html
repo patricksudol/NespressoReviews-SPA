@@ -2,7 +2,7 @@
     <br>
     <h2>Trending</h2>
     <carousel [height]="400" [cellWidth]="400">
-        <app-pod-tile 
+        <app-pod-tile
             *ngFor="let pod of trendingPods"
             class="carousel-cell"
             [name]="pod.name"
@@ -11,7 +11,7 @@
     </carousel>
     <h2>Original Espresso</h2>
     <carousel [height]="400" [cellWidth]="400">
-        <app-pod-tile 
+        <app-pod-tile
             *ngFor="let pod of originalPods"
             class="carousel-cell"
             [name]='pod.name'
@@ -27,7 +27,7 @@
     </carousel>
     <h2>Vertuo</h2>
     <carousel [height]="400" [cellWidth]="400">
-        <app-pod-tile 
+        <app-pod-tile
             *ngFor="let pod of vertuoPods"
             class="carousel-cell"
             [name]="pod.name"
