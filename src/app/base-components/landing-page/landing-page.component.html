@@ -15,15 +15,9 @@
             *ngFor="let pod of originalPods"
             class="carousel-cell"
             [name]='pod.name'
+            [podId]='pod.id'
         >
         </app-pod-tile>
-        <!-- <app-pod-tile class="carousel-cell"></app-pod-tile>
-        <app-pod-tile class="carousel-cell"></app-pod-tile>
-        <app-pod-tile class="carousel-cell"></app-pod-tile>
-        <app-pod-tile class="carousel-cell"></app-pod-tile>
-        <app-pod-tile class="carousel-cell"></app-pod-tile>
-        <app-pod-tile class="carousel-cell"></app-pod-tile>
-        <app-pod-tile class="carousel-cell"></app-pod-tile> -->
     </carousel>
     <h2>Vertuo</h2>
     <carousel [height]="400" [cellWidth]="400">

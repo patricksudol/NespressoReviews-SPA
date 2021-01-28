@@ -10,4 +10,8 @@ export class PodService {
   public getPods(): any {
     return this.http.get('http://localhost:8080/api/pods');
   }
+
+  public getPod(id: string): any {
+    return this.http.get(`http://localhost:8080/api/pods/${id}`)
+  }
 }

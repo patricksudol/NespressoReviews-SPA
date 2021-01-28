@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { StarRatingComponent } from 'ng-starrating';
+import { Pod } from 'src/app/models/pod.model';
 
 @Component({
   selector: 'app-pod-tile',
@@ -15,7 +17,15 @@ export class PodTileComponent {
   @Input()
   public name: string;
   @Input()
-  public url: string;
+  public podId: string;
+
+  constructor(
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit() {
+    this.route.queryParams
+  }
 
   onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) {
     alert(`Old Value:${$event.oldValue},

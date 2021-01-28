@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { NgxGalleryOptions, NgxGalleryImage } from 'ngx-gallery-9';
 import { PodReview } from 'src/app/models/podreview.model';
 
@@ -9,7 +10,10 @@ import { PodReview } from 'src/app/models/podreview.model';
 })
 export class PodPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
+
+  private podId: string;
+
 
   @Input()
   public podName: string;
@@ -26,6 +30,10 @@ export class PodPageComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      this.podId = params['id'];
+      console.log(params['id']);
+    });
 
     this.galleryOptions = [
       { imageDescription: true },

@@ -28,6 +28,7 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
     this.podTypes = this.route.snapshot.data.podtypes;
     this.pods = this.route.snapshot.data.pods;
+    this.trendingPods = this.route.snapshot.data.pods;
     this.originalPods = this.pods.filter(pod => pod.podTypeId == this.getPodTypeId('Original'));
     this.vertuoPods = this.pods.filter(pod => pod.podTypeId == this.getPodTypeId('Vertuo'));
   }
