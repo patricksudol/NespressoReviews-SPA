@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgxGalleryOptions, NgxGalleryImage } from 'ngx-gallery-9';
+import { Pod } from 'src/app/models/pod.model';
 import { PodReview } from 'src/app/models/podreview.model';
+import { PodService } from 'src/app/services/pod/pod.service';
 
 @Component({
   selector: 'app-pod-page',
@@ -10,7 +12,10 @@ import { PodReview } from 'src/app/models/podreview.model';
 })
 export class PodPageComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(
+    private route: ActivatedRoute,
+    private podService: PodService
+  ) { }
 
   private podId: string;
 
@@ -25,14 +30,18 @@ export class PodPageComponent implements OnInit {
   public galleryOptions: NgxGalleryOptions[];
   public galleryImages: NgxGalleryImage[];
   public reviews: string[] = Array(100).fill('test');
+  public pod: Pod;
   public podReviews: PodReview[];
   public page: number = 1;
 
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
+    this.route.params.subscribe(params => {
       this.podId = params['id'];
-      console.log(params['id']);
+    });
+
+    this.podService.getPod(this.podId).subscribe((data: Pod) => {
+      this.pod = data;
     });
 
     this.galleryOptions = [
