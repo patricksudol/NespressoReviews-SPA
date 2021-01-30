@@ -21,10 +21,9 @@ const routes: Routes = [
     component: PodListingComponent,
   },
   {
-    path: 'vertuo/:id',
+    path: 'pod/:id',
     component: PodPageComponent
   },
-  { path: 'pod', component: PodPageComponent },
   { path: '**', component: LandingPageComponent }
 ];
 

@@ -6,6 +6,7 @@
             *ngFor="let pod of trendingPods"
             class="carousel-cell"
             [name]="pod.name"
+            [podId]='pod.id'
         >
         </app-pod-tile>
     </carousel>
@@ -25,6 +26,7 @@
             *ngFor="let pod of vertuoPods"
             class="carousel-cell"
             [name]="pod.name"
+            [podId]='pod.id'
         >
         </app-pod-tile>
     </carousel>
