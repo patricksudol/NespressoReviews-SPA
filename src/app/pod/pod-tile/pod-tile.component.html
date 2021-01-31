@@ -2,7 +2,11 @@
     <img src="assets/images/puertorico.png" alt="Avatar" class="image">
     <div class="tile-header">
         <h6 class="title">{{name}}</h6>
-        <app-stars-rating [rating]="4"></app-stars-rating>
+        <!-- <h6>{{podReviewAverage}}</h6> -->
+        <app-stars-rating
+            [rating]="podReviewAverage"
+        >
+        </app-stars-rating>
     </div>
     <div class="overlay">
         <h3 class="overlay-description">{{name}}</h3>
