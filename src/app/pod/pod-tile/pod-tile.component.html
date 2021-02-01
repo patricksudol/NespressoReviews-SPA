@@ -1,9 +1,10 @@
 <div class="container" [style.width]="height" [style.padding-bottom]="paddingBottom">
     <img src="assets/images/puertorico.png" alt="Avatar" class="image">
     <div class="tile-header">
-        <h6 class="title">{{name}}</h6>
+        <h5 class="title tile-label">{{name}}</h5>
         <!-- <h6>{{podReviewAverage}}</h6> -->
         <app-stars-rating
+            class="tile-label"
             [rating]="podReviewAverage"
         >
         </app-stars-rating>
