@@ -14,4 +14,8 @@ export class PodService {
   public getPod(id: string): any {
     return this.http.get(`http://localhost:8080/api/pods/${id}`)
   }
+
+  public getPodByType(podType: string): any {
+    return this.http.get(`http://localhost:8080/api/pods/?podtype=${podType}`);
+  }
 }
