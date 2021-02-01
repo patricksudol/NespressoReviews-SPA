@@ -17,6 +17,10 @@ const routes: Routes = [
     }
   },
   {
+    path: 'original',
+    component: PodListingComponent,
+  },
+  {
     path: 'vertuo',
     component: PodListingComponent,
   },
