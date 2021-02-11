@@ -12,17 +12,22 @@
   position: relative;
 }
 
+.rating {
+  position: absolute;
+  display: inline-block;
+}
+
 app-stars-rating {
   top: 0%;
   position: absolute;
-  right: 0%;
+  right: 10%;
   display: inline-block;
 }
 
 .rating {
   position: absolute;
-  right: 10%;
-  bottom: 10%;
+  right: 0%;
+  top: 0%;
 }
 
 .image {
