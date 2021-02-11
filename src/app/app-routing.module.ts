@@ -5,6 +5,8 @@ import { PodPageComponent } from './pod/pod-page/pod-page.component';
 import { PodListingComponent } from './pod/pod-listing/pod-listing.component';
 import { PodsResolve } from 'src/resolvers/pods.resolve';
 import { PodTypesResolve } from 'src/resolvers/podtype.resolve';
+import { VertuoPodsResolve } from 'src/resolvers/vertuopods.resolve';
+import { OriginalPodsResolve } from 'src/resolvers/originalpods.resolve';
 
 
 const routes: Routes = [
@@ -19,10 +21,16 @@ const routes: Routes = [
   {
     path: 'original',
     component: PodListingComponent,
+    resolve: {
+      pods: OriginalPodsResolve
+    }
   },
   {
     path: 'vertuo',
     component: PodListingComponent,
+    resolve: {
+      pods: VertuoPodsResolve
+    }
   },
   {
     path: 'pod/:id',

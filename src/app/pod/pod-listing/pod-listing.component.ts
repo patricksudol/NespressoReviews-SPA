@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Pod } from 'src/app/models/pod.model';
 import { PodService } from 'src/app/services/pod/pod.service';
 import { SearchService } from 'src/app/services/search/search.service';
@@ -18,20 +19,12 @@ export class PodListingComponent implements OnInit {
 
   constructor(
     private searchService: SearchService,
-    private podService: PodService
+    private podService: PodService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
     this.searchService.currentSearchTerm.subscribe(search => this.filterTerm = search);
-    this.showPods()
-    console.log(this.pods);
+    this.pods = this.route.snapshot.data.pods;
   }
-
-  private showPods(): void {
-    this.podService.getPods()
-      .subscribe((pods: Pod[]) => {
-        this.pods = pods
-      });
-  }
-
 }
