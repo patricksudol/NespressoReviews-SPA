@@ -3,17 +3,18 @@
     </star-rating>
     <div class="user">
         <img class="user-picture" src="assets/images/profile.jpg">
-        <h6 class="user-name">Michael P.</h6>    
+        <h6 class="user-name">Michael P.</h6>
     </div>
     <h6><strong class="review-header">Review Header</strong></h6>
     <h6 class="text-muted">January 1, 2020</h6>
-    <p>{{isCollapsed ? minimizedBody + '...' : reviewBody }}</p>
-    <p 
-        *ngIf="reviewBody.split(' ').length > 50" 
-        class="read-more-link" 
+    <p>{{ podReview.description }}</p>
+    <!-- <p>{{isCollapsed ? minimizedBody + '...' : podReview.description }}</p> -->
+    <!-- <p
+        *ngIf="reviewBody.split(' ').length > 50"
+        class="read-more-link"
         (click)="toggleCollapse()"
     >
         {{ isCollapsed ? 'Read More' : 'Read Less'}}
-    </p>
+    </p> -->
     <hr class="solid">
 </div>

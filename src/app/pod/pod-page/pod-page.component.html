@@ -44,7 +44,7 @@
         <div class="card-body">
             <h2 class="card-title">Reviews</h2>
             <hr class="solid">
-            <app-review *ngFor="let podReview of podReviews | paginate: { itemsPerPage: 12, currentPage: page }"></app-review>
+            <app-review [podReview]="podReview" *ngFor="let podReview of podReviews | paginate: { itemsPerPage: 12, currentPage: page }"></app-review>
             <pagination-controls class="pagination-control" (pageChange)="page = $event"></pagination-controls>
         </div>
     </div>
