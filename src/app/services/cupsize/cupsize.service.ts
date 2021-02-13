@@ -7,7 +7,11 @@ import { Injectable } from '@angular/core';
 export class CupSizeService {
   constructor(private http: HttpClient) { }
 
-  getCupSizes() {
+  public getCupSizes(): any {
     return this.http.get('http://localhost:8080/api/cupsize');
+  }
+
+  public getCupSize(id: string): any {
+    return this.http.get(`http://localhost:8080/api/cupsize/${id}`);
   }
 }

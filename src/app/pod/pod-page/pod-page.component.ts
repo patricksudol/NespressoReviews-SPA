@@ -1,9 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgxGalleryOptions, NgxGalleryImage } from 'ngx-gallery-9';
+import { Cupsize } from 'src/app/models/cupsize.model';
 import { Pod } from 'src/app/models/pod.model';
 import { PodReview } from 'src/app/models/podreview.model';
+import { Podtype } from 'src/app/models/podtype.model';
+import { CupSizeService } from 'src/app/services/cupsize/cupsize.service';
+import { PodReviewService } from 'src/app/services/pod-review/pod-review.service';
 import { PodService } from 'src/app/services/pod/pod.service';
+import { PodTypeService } from 'src/app/services/podtype/podtype.service';
 
 @Component({
   selector: 'app-pod-page',
@@ -14,25 +19,23 @@ export class PodPageComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private podService: PodService
+    private podService: PodService,
+    private podTypeService: PodTypeService,
+    private cupSizeService: CupSizeService,
+    private podReviewService: PodReviewService
   ) { }
-
-  private podId: string;
-
-
-  @Input()
-  public podName: string;
-  @Input()
-  public cupSize: string;
-  @Input()
-  public description: string;
 
   public galleryOptions: NgxGalleryOptions[];
   public galleryImages: NgxGalleryImage[];
+
   public reviews: string[] = Array(100).fill('test');
   public pod: Pod;
+  public podType: Podtype;
+  public cupSize: Cupsize;
   public podReviews: PodReview[];
   public page: number = 1;
+
+  private podId: string;
 
 
   ngOnInit(): void {
@@ -40,9 +43,20 @@ export class PodPageComponent implements OnInit {
       this.podId = params['id'];
     });
 
-    this.podService.getPod(this.podId).subscribe((data: Pod) => {
-      this.pod = data;
+    this.podService.getPod(this.podId).subscribe((pod: Pod) => {
+      this.pod = pod;
+      this.podTypeService.getPodType(pod.podTypeId).subscribe((podtype: Podtype) => {
+        this.podType = podtype;
+      });
+      this.cupSizeService.getCupSize(pod.cupSizeId).subscribe((cupsize: Cupsize) => {
+        this.cupSize = cupsize;
+      });
+      this.podReviewService.getPodReviewsByPod(pod.id).subscribe((podreviews: PodReview[]) => {
+        this.podReviews = podreviews;
+      })
+
     });
+
 
     this.galleryOptions = [
       { imageDescription: true },

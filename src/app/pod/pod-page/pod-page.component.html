@@ -6,8 +6,8 @@
             <div class="pod-description">
                 <h4 class="card-title">{{pod.name}}</h4>
                 <span class="badge badge-pill badge-primary">Good with Ice</span>
-                <h5 class="card-subtitle mb-2 text-muted">Vertuo</h5>
-                <h6 class="card-subtitle mb-2">Double Espresso</h6>
+                <h5 class="card-subtitle mb-2 text-muted">{{podType.name}}</h5>
+                <h6 class="card-subtitle mb-2">{{cupSize.name}}</h6>
                 <p class="card-text">{{pod.description}}</p>
             </div>
             <hr class="solid">
@@ -44,7 +44,7 @@
         <div class="card-body">
             <h2 class="card-title">Reviews</h2>
             <hr class="solid">
-            <app-review *ngFor="let review of reviews | paginate: { itemsPerPage: 12, currentPage: page }"></app-review>
+            <app-review *ngFor="let podReview of podReviews | paginate: { itemsPerPage: 12, currentPage: page }"></app-review>
             <pagination-controls class="pagination-control" (pageChange)="page = $event"></pagination-controls>
         </div>
     </div>

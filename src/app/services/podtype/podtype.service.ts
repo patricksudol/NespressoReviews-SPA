@@ -1,7 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Podtype } from 'src/app/models/podtype.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,5 +9,9 @@ export class PodTypeService {
 
   public getPodTypes(): any {
     return this.http.get('http://localhost:8080/api/podtypes');
+  }
+
+  public getPodType(id: string): any {
+    return this.http.get(`http://localhost:8080/api/podtypes/${id}`);
   }
 }

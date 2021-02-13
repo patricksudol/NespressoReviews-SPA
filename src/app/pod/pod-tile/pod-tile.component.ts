@@ -1,7 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input } from '@angular/core';
 import { StarRatingComponent } from 'ng-starrating';
-import { Pod } from 'src/app/models/pod.model';
 import { PodReviewService } from 'src/app/services/pod-review/pod-review.service';
 
 @Component({
@@ -23,7 +21,6 @@ export class PodTileComponent {
   public podReviewAverage: number;
 
   constructor(
-    private route: ActivatedRoute,
     private podReviewService: PodReviewService
   ) {}
 
