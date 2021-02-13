@@ -7,7 +7,7 @@ import { PodReview } from '../models/podreview.model';
   templateUrl: './review.component.html',
   styleUrls: ['./review.component.scss']
 })
-export class ReviewComponent {
+export class ReviewComponent implements OnInit{
 
   @Input()
   public podReview: PodReview;
@@ -20,6 +20,10 @@ export class ReviewComponent {
     // const reviewArray: string[] = this.reviewBody.split(' ');
     // this.isCollapsed = reviewArray.length > 50 ? true : false;
     // this.minimizedBody = reviewArray.slice(0, 50 ).join(' ');
+  }
+
+  ngOnInit(){
+    console.log(this.podReview);
   }
 
   public toggleCollapse() {

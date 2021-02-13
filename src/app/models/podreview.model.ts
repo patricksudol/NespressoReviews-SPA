@@ -3,5 +3,7 @@ export interface PodReview {
     userId: string;
     podId: string;
     score: number;
+    header: string;
     description: string;
+    createdDate: Date;
 }
