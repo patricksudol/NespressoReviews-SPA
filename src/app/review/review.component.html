@@ -2,7 +2,7 @@
     <app-stars-rating [rating]="podReview.score"></app-stars-rating>
     <div class="user">
         <img class="user-picture" src="assets/images/profile.jpg">
-        <h6 class="user-name">Michael P.</h6>
+        <h6 class="user-name">{{ user.userName }}</h6>
     </div>
     <h6><strong class="review-header">{{ podReview.header }}</strong></h6>
     <h6 class="text-muted">{{ podReview.createdDate | date }}</h6>

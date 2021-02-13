@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PodReviewService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   public getPodReviews(): any {
     return this.http.get('http://localhost:8080/api/podreviews');
